@@ -1,34 +1,31 @@
-<div >
-    <form [formGroup]="tableSelectorForm" style="display:flex" >
-        <div class="criteria-div-btns">
-            <mat-label>Select Data Source: </mat-label>
-            <mat-radio-group formControlName="source">
-                <mat-radio-button value="CSSNG">CSSNG</mat-radio-button>
-                <mat-radio-button value="OSS">OSS</mat-radio-button>
-                <mat-radio-button value="IPLAN">IPLAN</mat-radio-button>
-                <mat-radio-button value="PACE">PACE</mat-radio-button>
-                <mat-radio-button value="ATOLL">ATOLL</mat-radio-button>
-                <mat-radio-button value="AF">AUTOFORM</mat-radio-button>
-            </mat-radio-group>
-        </div>
-       <div class="criteria-div-btns">
-        <div class="col-md criteria-div-btns"   *ngIf="isDisplayTechnologyControlsRB">
-            <mat-label>Select Technolgy: </mat-label>
-            <mat-radio-group formControlName="technology">
-                <mat-radio-button value="5G">5G</mat-radio-button>
-                <mat-radio-button value="4G">4G</mat-radio-button>
-                <!-- <mat-radio-button value="3G" >3G</mat-radio-button>-->
-            </mat-radio-group>
-        </div>
+<div class="container">
+  <form [formGroup]="tableSelectorForm" class="form">
+    <div class="criteria-section">
+      <label class="form-label">Select Data Source:</label>
+      <mat-radio-group formControlName="source">
+        <mat-radio-button value="CSSNG">CSSNG</mat-radio-button>
+        <mat-radio-button value="OSS">OSS</mat-radio-button>
+        <mat-radio-button value="IPLAN">IPLAN</mat-radio-button>
+        <mat-radio-button value="PACE">PACE</mat-radio-button>
+        <mat-radio-button value="ATOLL">ATOLL</mat-radio-button>
+        <mat-radio-button value="AF">AUTOFORM</mat-radio-button>
+      </mat-radio-group>
+    </div>
 
-        <div class="criteria-div-btns" *ngIf="isDisplayVendorControlsRB">
-            <mat-label>Select Vendor: </mat-label>
-            <mat-radio-group formControlName="vendor">
-                <mat-radio-button value="Nokia">Nokia</mat-radio-button>
-                <mat-radio-button value="Ericsson">Ericsson</mat-radio-button>
-            </mat-radio-group>
-        </div>
-       </div>
+    <div class="criteria-section" *ngIf="isDisplayTechnologyControlsRB">
+      <label class="form-label">Select Technology:</label>
+      <mat-radio-group formControlName="technology">
+        <mat-radio-button value="5G">5G</mat-radio-button>
+        <mat-radio-button value="4G">4G</mat-radio-button>
+      </mat-radio-group>
+    </div>
 
-    </form>
+    <div class="criteria-section" *ngIf="isDisplayVendorControlsRB">
+      <label class="form-label">Select Vendor:</label>
+      <mat-radio-group formControlName="vendor">
+        <mat-radio-button value="Nokia">Nokia</mat-radio-button>
+        <mat-radio-button value="Ericsson">Ericsson</mat-radio-button>
+      </mat-radio-group>
+    </div>
+  </form>
 </div>
