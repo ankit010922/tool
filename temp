@@ -1,34 +1,34 @@
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+<div >
+    <form [formGroup]="tableSelectorForm" style="display:flex" >
+        <div class="criteria-div-btns">
+            <mat-label>Select Data Source: </mat-label>
+            <mat-radio-group formControlName="source">
+                <mat-radio-button value="CSSNG">CSSNG</mat-radio-button>
+                <mat-radio-button value="OSS">OSS</mat-radio-button>
+                <mat-radio-button value="IPLAN">IPLAN</mat-radio-button>
+                <mat-radio-button value="PACE">PACE</mat-radio-button>
+                <mat-radio-button value="ATOLL">ATOLL</mat-radio-button>
+                <mat-radio-button value="AF">AUTOFORM</mat-radio-button>
+            </mat-radio-group>
+        </div>
+       <div class="criteria-div-btns">
+        <div class="col-md criteria-div-btns"   *ngIf="isDisplayTechnologyControlsRB">
+            <mat-label>Select Technolgy: </mat-label>
+            <mat-radio-group formControlName="technology">
+                <mat-radio-button value="5G">5G</mat-radio-button>
+                <mat-radio-button value="4G">4G</mat-radio-button>
+                <!-- <mat-radio-button value="3G" >3G</mat-radio-button>-->
+            </mat-radio-group>
+        </div>
 
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
+        <div class="criteria-div-btns" *ngIf="isDisplayVendorControlsRB">
+            <mat-label>Select Vendor: </mat-label>
+            <mat-radio-group formControlName="vendor">
+                <mat-radio-button value="Nokia">Nokia</mat-radio-button>
+                <mat-radio-button value="Ericsson">Ericsson</mat-radio-button>
+            </mat-radio-group>
+        </div>
+       </div>
 
-.criteria-div-btns {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.mat-label {
-  font-weight: bold;
-}
-
-.mat-radio-button {
-  margin-top: 5px;
-}
-
-.mat-radio-button:first-child {
-  margin-top: 0;
-}
+    </form>
+</div>
