@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="header">
+    <h3>{{pageTitle}}</h3>
+  </div>
+</div>
+
+<div class="data-table">
+  <div class="row">
+    <mat-form-field class="query-field">
+      <mat-select placeholder="Select saved query" (selectionChange)="applyQuery($event.value)">
+        <mat-option *ngFor="let query of querys" [value]="query">
+          {{query.queryName}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <app-table-selector></app-table-selector>
+  <app-search-criteria class="criteria" (passDataEvent)="onPassDataEvent($event)"></app-search-criteria>
+</div>
+
+<div class="table-data">
+  <app-table-data [searchCriteriaData]="searchCriteriaData"></app-table-data>
+</div>
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+}
+
+.data-table {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.query-field {
+  width: 300px;
+}
+
+.criteria {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table-data {
+  margin-top: 20px;
+}
