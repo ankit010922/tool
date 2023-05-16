@@ -1,31 +1,26 @@
-<div class="container">
-  <form [formGroup]="tableSelectorForm" class="form">
-    <div class="criteria-section">
-      <label class="form-label">Select Data Source:</label>
-      <mat-radio-group formControlName="source">
-        <mat-radio-button value="CSSNG">CSSNG</mat-radio-button>
-        <mat-radio-button value="OSS">OSS</mat-radio-button>
-        <mat-radio-button value="IPLAN">IPLAN</mat-radio-button>
-        <mat-radio-button value="PACE">PACE</mat-radio-button>
-        <mat-radio-button value="ATOLL">ATOLL</mat-radio-button>
-        <mat-radio-button value="AF">AUTOFORM</mat-radio-button>
-      </mat-radio-group>
-    </div>
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-    <div class="criteria-section" *ngIf="isDisplayTechnologyControlsRB">
-      <label class="form-label">Select Technology:</label>
-      <mat-radio-group formControlName="technology">
-        <mat-radio-button value="5G">5G</mat-radio-button>
-        <mat-radio-button value="4G">4G</mat-radio-button>
-      </mat-radio-group>
-    </div>
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+}
 
-    <div class="criteria-section" *ngIf="isDisplayVendorControlsRB">
-      <label class="form-label">Select Vendor:</label>
-      <mat-radio-group formControlName="vendor">
-        <mat-radio-button value="Nokia">Nokia</mat-radio-button>
-        <mat-radio-button value="Ericsson">Ericsson</mat-radio-button>
-      </mat-radio-group>
-    </div>
-  </form>
-</div>
+.criteria-section {
+  margin-bottom: 10px;
+}
+
+.form-label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
