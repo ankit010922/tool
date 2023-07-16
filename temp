@@ -1,22 +1,11 @@
-/* Styles for the modal */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-content {
-  background-color: #fff; /* White background for the modal content */
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  max-width: 400px; /* Adjust the maximum width as per your requirements */
-  width: 100%;
-  text-align: center;
-}
+ERROR Error: mat-form-field must contain a MatFormFieldControl.
+    at getMatFormFieldMissingControlError (form-field.es5.js:116:1)
+    at push../node_modules/@angular/material/esm5/form-field.es5.js.MatFormField._validateControlChild (form-field.es5.js:703:1)
+    at push../node_modules/@angular/material/esm5/form-field.es5.js.MatFormField.ngAfterContentChecked (form-field.es5.js:478:1)
+    at callProviderLifecycles (core.js:18850:1)
+    at callElementProvidersLifecycles (core.js:18828:1)
+    at callLifecycleHooksChildrenFirst (core.js:18818:1)
+    at checkAndUpdateView (core.js:19749:1)
+    at callViewAction (core.js:19986:1)
+    at execComponentViewsAction (core.js:19928:1)
+    at checkAndUpdateView (core.js:19751:1)
